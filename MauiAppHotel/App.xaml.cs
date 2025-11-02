@@ -6,7 +6,8 @@
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Views.ContratacaoHospedagem());
+            MainPage = new NavigationPage(new Views.Contratacaodahospedagem());
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override Window CreateWindow(IActivationState? activationState)

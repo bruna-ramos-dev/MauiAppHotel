@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Gray100}">
+
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="Center"
+                             Padding="20"
+                             Spacing="20">
+
+            <!-- Título -->
+            <Label Text="Sobre o Desenvolvedor"
+                   FontFamily="Kalam"
+                   FontSize="40"
+                   HorizontalOptions="Center"
+                   TextColor="{StaticResource Primary}" />
+
+            <!-- Card com informações -->
+            <Frame BackgroundColor="White"
+                   BorderColor="{StaticResource Primary}"
+                   CornerRadius="15"
+                   Padding="20"
+                   HasShadow="True">
+
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Nome do Desenvolvedor:"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}" />
+                    <Label Text="Bruna Ramos"
+                           FontSize="18"
+                           TextColor="Black" />
+
+                    <Label Text="Name:"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}" />
+                    <Label Text="bruna-ramos-dev"
+                           FontSize="18"
+                           TextColor="Black" />
+
+                    <Label Text="Ano de Desenvolvimento:"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}" />
+                    <Label Text="2025"
+                           FontSize="18"
+                           TextColor="Black" />
+
+                    <Label Text="E-mail:"
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}" />
+                    <Label Text="bruna-chel@hotmail.com"
+                           FontSize="18"
+                           TextColor="Black" />
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <!-- Rodapé -->
+            <Label Text="© 2025 - Todos os direitos reservados."
+                   FontSize="12"
+                   HorizontalOptions="Center"
+                   TextColor="Gray" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
