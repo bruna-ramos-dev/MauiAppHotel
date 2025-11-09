@@ -9,12 +9,12 @@ namespace MauiAppHotel.Views
         // ✅ AJUSTE 4:
         // Torna o campo somente leitura e usa convenção de nomenclatura em C#
         private readonly App _propriedadesApp;
-        
+
 
         public ContratacaoHospedagem()
         {
             InitializeComponent();
-
+        
             // Inicializa a referência ao App principal
             _propriedadesApp = (App)Application.Current;
 
@@ -30,6 +30,7 @@ namespace MauiAppHotel.Views
             dtpck_checkout.MaximumDate = dtpck_checkin.Date.AddMonths(6);
         }
 
+        
         private async void Button_Clicked(object sender, EventArgs e)
         {
             try
