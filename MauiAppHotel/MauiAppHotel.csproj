@@ -63,12 +63,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Properties\Models\Quarto.xaml.cs">
+	    <DependentUpon>Quarto.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\Contratacaodahospedagem.xaml.cs">
 	    <DependentUpon>Contratacaodahospedagem.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Properties\Models\Quarto.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Contratacaodahospedagem.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
