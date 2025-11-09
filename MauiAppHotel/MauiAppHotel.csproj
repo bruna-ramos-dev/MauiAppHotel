@@ -63,7 +63,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Properties\Models\Quarto.xaml.cs">
+	  <Compile Update="Models\Hospedagem.cs.xaml.cs">
+	    <DependentUpon>Hospedagem.cs.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Models\Hospedagem.xaml.cs">
+	    <DependentUpon>Hospedagem.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Models\Quarto.xaml.cs">
 	    <DependentUpon>Quarto.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Contratacaodahospedagem.xaml.cs">
@@ -72,7 +78,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Properties\Models\Quarto.xaml">
+	  <MauiXaml Update="Models\Hospedagem.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Models\Quarto.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Contratacaodahospedagem.xaml">

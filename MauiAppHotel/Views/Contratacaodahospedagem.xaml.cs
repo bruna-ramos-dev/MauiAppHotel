@@ -1,5 +1,6 @@
-using System;
+using MauiAppHotel.Models;
 using Microsoft.Maui.Controls;
+using System;
 
 namespace MauiAppHotel.Views
 {
@@ -8,6 +9,7 @@ namespace MauiAppHotel.Views
         // ✅ AJUSTE 4:
         // Torna o campo somente leitura e usa convenção de nomenclatura em C#
         private readonly App _propriedadesApp;
+        
 
         public ContratacaoHospedagem()
         {
@@ -32,14 +34,32 @@ namespace MauiAppHotel.Views
         {
             try
             {
-                // Navegação assíncrona para a página de hospedagem contratada
-                await Navigation.PushAsync(new HospedagemContratada());
+                // Captura os valores dos controles
+                int adultos = (int)stp_adultos.Value;
+                int criancas = (int)stp_criancas.Value;
+                var quartoSelecionado = (Quarto)pck_quarto.SelectedItem;
+                DateTime checkin = dtpck_checkin.Date;
+                DateTime checkout = dtpck_checkout.Date;
+
+                // Cria o objeto com os dados da hospedagem
+                var hospedagem = new Hospedagem
+                {
+                    Adultos = adultos,
+                    Criancas = criancas,
+                    Quarto = quartoSelecionado,
+                    Checkin = checkin,
+                    Checkout = checkout
+                };
+
+                // Envia o objeto para a próxima página
+                await Navigation.PushAsync(new HospedagemContratada(hospedagem));
             }
             catch (Exception ex)
             {
                 await DisplayAlert("Ops!", ex.Message, "OK");
             }
         }
+
 
         // ✅ AJUSTE 4:
         // Corrige nomenclatura e aviso de referência nula potencial
